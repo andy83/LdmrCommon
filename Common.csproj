@@ -14,7 +14,7 @@
     <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
-    <NoWarn>$(NoWarn);CS1591;SYSLIB0011;CA1416</NoWarn>
+    <NoWarn>$(NoWarn);CS1591;SYSLIB0011;SYSLIB0050;SYSLIB0051;CA1416</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
