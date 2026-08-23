@@ -1,0 +1,26 @@
+name: Build
+
+on:
+  push:
+    branches: [master, xvtsharp/net10]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore
+        run: dotnet restore Common.csproj
+
+      - name: Build
+        run: dotnet build Common.csproj --no-restore --configuration Release
